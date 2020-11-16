@@ -32,6 +32,6 @@ class PostsController extends Controller
             'image' => $image_path,
         ]); //CREATING THROUGH RELATIONSHIP
 
-        return redirect('/profile/' . auth()->user()->id);
+        return redirect('/profiles/' . auth()->user()->id);
     }
 }
