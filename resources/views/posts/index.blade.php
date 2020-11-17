@@ -24,5 +24,11 @@
             </div>
         </div>
     @endforeach
+
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            {{ $posts->links() }}
+        </div>
+    </div>
 </div>
 @endsection
