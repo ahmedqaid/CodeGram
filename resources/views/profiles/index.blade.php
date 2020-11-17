@@ -10,7 +10,7 @@
             <div class="d-flex justify-content-between align-items-baseline">
                 <div class="d-flex align-items-center pb-3">
                     <div class="h4">{{ $user->username }}</div>
-                    <follow-button user_id="{{ $user->id }}"></follow-button> 
+                    <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button> 
                     {{-- can pass any number of props --}}
                 </div>
 
@@ -26,8 +26,8 @@
 
             <div class="d-flex">
                 <div class="pr-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
-                <div class="pr-5"><strong>192</strong> followers</div>
-                <div class="pr-5"><strong>187</strong> following</div>
+                <div class="pr-5"><strong>{{ $user->profile->followers->count() }}</strong> followers</div>
+                <div class="pr-5"><strong>{{ $user->following->count() }}</strong> following</div>
             </div>
             <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->description ?? 'N/A' }}</div>
