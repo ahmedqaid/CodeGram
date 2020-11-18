@@ -27,8 +27,8 @@ class RegisterController extends Controller
      * Where to redirect users after registration.
      *
      * @var string
+     protected $redirectTo = '/';
      */
-    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
